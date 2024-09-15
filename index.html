@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-App</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+    <div class="container">
+      <div class="search-section">
+        <div class="input-wrapper">
+          <span class="material-symbols-rounded"> search </span>
+          <input
+            type="text"
+            placeholder="Enter a City Name"
+            class="Search-input"
+          />
+        </div>
+        <button class="location-button">
+          <span class="material-symbols-rounded"> my_location </span>
+        </button>
+      </div>
+      <div class="no-results">
+        <img src="./icons/no-result.svg" alt="" class="weather-icon">
+        <h3 class="title">Something went wrong!</h3>
+        <p class="msg">We're unable to retrive the weather details. Ensure you have Entered a valid city or try again later</p>
+    </div>
+      <div class="Weather-section">
+      
+        <div class="current-weather">
+          <img src="./icons/clouds.svg" alt="" class="weather-icon" />
+          <h2 class="temp"> 00 <span> &deg; C</span> </h2>
+          <p class="description">Weather Discription</p>
+        </div>
+        <div class="hourly-weather">
+          <ul class="weather-list">
+       
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+    <footer><p>Designed & created by Prince Shah with 🖤</p></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

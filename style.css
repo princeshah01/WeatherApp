@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background:#528ab4;
+
+}
+footer{
+    display: flex;
+    justify-content: center;
+
+}
+footer p {
+    font-weight: 500;
+    font-family: "Dancing Script", cursive;
+
+}
+body.show-no-results .Weather-section{
+    visibility: hidden;
+}
+.no-results{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+body.show-no-results .no-results{
+    display: flex;
+}
+.no-results .title{
+    margin: 25px 0 15px;
+}
+.no-results .msg{
+    font-weight: 500;
+    width: 300px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+.container{
+    border-radius: 10px;
+    max-width: 425px;
+    flex-grow: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: #b5dfec;
+    position: relative;
+    overflow: hidden;
+
+}
+.hourly-weather .weather-item .weather-icon{
+    width: 28px;
+    aspect-ratio: 1;
+}
+.hourly-weather .weather-list{
+    display: flex;
+    list-style: none;
+    gap: 38px;
+    overflow-x:auto ;
+    padding: 10px 20px 10px 20px;
+    scrollbar-width: thin;
+    margin: 5px;
+    scrollbar-color:transparent transparent ;
+    
+}
+.hourly-weather:hover .weather-list{
+    scrollbar-color:#bfbfbf transparent ;
+
+}
+.hourly-weather{
+    border-top: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.search-section{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 25px;
+
+}
+.search-section .input-wrapper{
+    height: 54px;
+    width: 100%;
+    position: relative;
+}
+.search-section .input-wrapper span {
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+
+}   
+.search-section .Search-input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 20px 0 50px;
+    border-radius: 6px;
+    border: 1px solid #beb0ff;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    background: #b5dfec;
+
+}
+.Search-input:focus{
+    border-color: #5f41e4;
+
+}
+.search-section .Search-input::placeholder{
+    text-transform: none;
+}
+.location-button{
+    height: 54px;
+    width: 56px;
+    flex-shrink: 0;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b5dfec;
+    color: #5f41e4;
+    border-radius: 6px;
+    border: 1px solid #beb0ff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.location-button span{
+    font-size: 1.2rem;
+}
+
+.location-button:hover{
+    color: #b5dfec;
+    background-color: #5f41e4;
+    border-color: #5f41e4;
+}
+.current-weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.current-weather h2{
+    margin-bottom: 2rem;
+}
+.current-weather h2 span {
+    vertical-align: top;
+}
+.current-weather .weather-icon {
+    aspect-ratio: 1;
+    width: 140px;
+}
+.current-weather .temperature {
+    font-size: 3.38rem;
+    margin: 23px 0;
+    display: flex;
+}
+.current-weather .temperature span{
+    font-size: 1.56rem;
+    font-weight: 500;
+    margin: 5px 0 0 2px;
+
+}
+.current-weather .description{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+
+} 
+@media (max-width:624px){
+    body{
+        padding: 15px;
+    }
+    .search-section{
+        padding: 20px;
+    }
+    .hourly-weather{
+        padding: 16px 20px;
+    }
+    .hourly-weather .weather-list{
+        gap: 32px;
+    }
+}
+@media (max-width:450px){
+    body{
+        margin: auto 2rem auto 2rem;
+    }
+    .search-section{
+        margin: auto;
+    }
+    .hourly-weather{
+        padding: auto;
+    }
+    .hourly-weather .weather-list{
+        gap: auto;
+    }
+}
